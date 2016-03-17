@@ -10,7 +10,7 @@ $config = array(
 	// 2 = warnings
 	// 3 = information
 	// 4 = debug
-	'log_level' => 1,
+	'log_level' => 0,
 
 	// Cache setup.
 	'cache_enabled' => TRUE,
@@ -20,14 +20,16 @@ $config = array(
 	'sqlite_version' => FALSE,
 
 	// This needs to be the URL that you'll use to access the script on the web.
-	'url' => 'http://your.server.tld/dir/index.php',
+	'url' => 'http://opengapps.org',
 
 	// Feed title.
-	'title' => 'Saved Searches',
+	'title' => 'Open GApps releases',
 
 	// Specify your feeds here.
 	'feeds' => array(
-		'A Feed' => 'http://feed.url/',
-		'Another Feed' => 'http://another.feed/',
+		'ARM' => 'https://github.com/opengapps/arm/releases.atom',
+		'ARM64' => 'https://github.com/opengapps/arm64/releases.atom',
+		'x86' => 'https://github.com/opengapps/x86/releases.atom',
+		'x86_64' => 'https://github.com/opengapps/x86_64/releases.atom',
 	),
 );

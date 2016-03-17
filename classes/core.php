@@ -166,34 +166,6 @@ class Core {
 			$message
 		)."\n";
 
-		// Enable colored output for debug mode.
-		if (Core::config('config.debug_mode')) {
-			switch ($level) {
-				case 'error':
-					$color = 'red';
-					break;
-				case 'warning':
-					$color = 'magenta';
-					break;
-				case 'info':
-					$color = 'cyan';
-					break;
-				case 'debug':
-					$color = 'yellow';
-					break;
-			}
-
-			$color_level = ansi::csprintf($color, FALSE, $level);
-
-			echo sprintf(
-					'%s.%s - [%s] %s',
-					date('Y-m-d H:i:s'),
-					$micro,
-					$color_level,
-					$message
-				), "\n";
-		}
-
 		// Finally write it to the log.
 		static $log_file;
 		if (! (bool) $log_file) {
@@ -203,9 +175,6 @@ class Core {
 		fwrite($log_file, $log_message);
 	}
 }
-
-// Immediately load the ansi colors class, else logging fails inside autoload.
-require_once(APPPATH.'classes/ansi-colors/ansi_color'.EXT);
 
 // Register for autoload.
 spl_autoload_register('Core::autoload');
