@@ -38,9 +38,9 @@ class Core {
 			Core::log('warning', 'sqlite3 extension not loaded - attempting dynamic load');
 
 			if (self::is_win()) {
-				$result = @dl('php_sqlite3.dll');
+#				$result = @dl('php_sqlite3.dll');
 			} else {
-				$result = @dl('sqlite3.so');
+#				$result = @dl('sqlite3.so');
 			}
 
 			if ((bool) $result) {
