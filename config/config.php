@@ -23,13 +23,15 @@ $config = array(
 	'url' => 'http://opengapps.org',
 
 	// Feed title.
-	'title' => 'Open GApps releases',
+	'title' => 'Open GApps changelog',
 
 	// Specify your feeds here.
 	'feeds' => array(
-		'ARM' => 'https://github.com/opengapps/arm/releases.atom',
-		'ARM64' => 'https://github.com/opengapps/arm64/releases.atom',
-		'x86' => 'https://github.com/opengapps/x86/releases.atom',
-		'x86_64' => 'https://github.com/opengapps/x86_64/releases.atom',
+		'OPENGAPPS' => 'https://github.com/opengapps/opengapps/commits/master.atom',
+		'ALL' => 'https://github.com/opengapps/all/commits/master.atom',
+		'ARM' => 'https://github.com/opengapps/arm/commits/master.atom',
+		'ARM64' => 'https://github.com/opengapps/arm64/commits/master.atom',
+		'x86' => 'https://github.com/opengapps/x86/commits/master.atom',
+		'x86_64' => 'https://github.com/opengapps/x86_64/commits/master.atom',
 	),
 );

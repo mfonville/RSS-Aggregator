@@ -25,7 +25,6 @@ class RSS {
 		$xml = simplexml_load_string($data, 'AdvancedXMLElement');
 
 		foreach ($xml->entry as $entry) {
-			$entry->link['href'] = "https://github.com" . $entry->link['href'];
 			$items[] = $entry;
 		}
 
