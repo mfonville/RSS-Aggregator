@@ -20,7 +20,7 @@ $config = array(
 	'sqlite_version' => FALSE,
 
 	// This needs to be the URL that you'll use to access the script on the web.
-	'url' => 'http://opengapps.org',
+	'url' => 'https://opengapps.org',
 
 	// Feed title.
 	'title' => 'Open GApps changelog',
